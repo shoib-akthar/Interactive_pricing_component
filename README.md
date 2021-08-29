@@ -1,4 +1,3 @@
-live link :https://shoib-akthar.github.io/interactive-pricing-component-main/
-
+live link :https://shoib-akthar.github.io/Interactive_pricing_component/
 
 Interactive pricing component
