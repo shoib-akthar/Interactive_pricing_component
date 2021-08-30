@@ -68,6 +68,7 @@ font-size: 36px;
 }
 .container-inner .price{
   font-size: 15px;
+  padding-top: 25px;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -147,102 +148,66 @@ ul li::marker {
 }
 /* End of toggle */
 
-input[type="range"] {
-  -webkit-appearance: none;
-  margin: 18px 0;
+/* slider */
+.progress .progress-bar {
+  position: relative;
+  height: 20px;
+}
+.progress-bar input[type="range"] {
   width: 100%;
 }
-
-input[type="range"]:focus {
+.myrange {
+  appearance: none;
+  background-color: hsl(174, 77%, 80%);
+  height: 10px;
+  border-radius: 5px;
   outline: none;
 }
-
-input[type="range"]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 8.4px;
-  cursor: pointer;
-  background: hsl(174, 86%, 45%);
-  border-radius: 30px;
-  border: 2px solid hsl(174, 86%, 45%);
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px hsl(174, 86%, 45%), 0px 0px 1px hsl(174, 86%, 45%);
-  border: 1px solid hsl(174, 86%, 45%);
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background: hsl(174, 86%, 45%);
-  cursor: pointer;
+.myrange::-webkit-slider-thumb {
   -webkit-appearance: none;
-  margin-top: -14px;
-}
-
-input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: hsl(174, 86%, 45%);
-}
-
-input[type="range"]::-moz-range-track {
-  width: 100%;
-  height: 8.4px;
-  cursor: pointer;
-  box-shadow: 1px 1px 1px hsl(174, 86%, 45%), 0px 0px 1px #0d0d0d;
-  background: #3071a9;
-  border-radius: 1.3px;
-  border: 0.2px solid hsl(174, 86%, 45%);
-}
-
-input[type="range"]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px hsl(174, 86%, 45%), 0px 0px 1px #0d0d0d;
-  border: 1px solid hsl(174, 86%, 45%);
-  height: 30px;
-  width: 30px;
+  width: 35px;
+  height: 35px;
+  background-image: url("images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: hsl(174, 86%, 45%);
   border-radius: 50%;
-  background: #ffffff;
   cursor: pointer;
 }
-
-input[type="range"]::-ms-track {
-  width: 100%;
-  height: 8.4px;
+.myrange::-webkit-slider-thumb:hover {
+  box-shadow: 0px 0px 10px hsl(174, 86%, 45%);
+}
+.progress .switch {
+  position: relative;
+  height: 20px;
+  width: 40px;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: hsl(174, 77%, 80%);
   cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  border-width: 16px 0;
-  color: transparent;
 }
-
-input[type="range"]::-ms-fill-lower {
-  background: hsl(174, 86%, 45%);
-  border: 0.2px solid hsl(174, 86%, 45%);
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px hsl(174, 86%, 45%), 0px 0px 1px hsl(174, 86%, 45%);
+.progress .switch input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
 }
-
-input[type="range"]::-ms-fill-upper {
-  background: #3071a9;
-  border: 0.2px solid hsl(174, 86%, 45%);
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px hsl(174, 86%, 45%), 0px 0px 1px #0d0d0d;
-}
-
-input[type="range"]::-ms-thumb {
-  box-shadow: 1px 1px 1px hsl(174, 86%, 45%), 0px 0px 1px #0d0d0d;
-  border: 1px solid hsl(174, 86%, 45%);
-  height: 36px;
+.progress .switch .slider {
   width: 16px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  top: 2px;
+  left: -7px;
+  transition: all 0.5s;
 }
+.progress .switch input:checked + .slider {
+  transform: translateX(18px);
+}
+/* end slider */
 
-input[type="range"]:focus::-ms-fill-lower {
-  background: hsl(174, 86%, 45%);
-}
-
-input[type="range"]:focus::-ms-fill-upper {
-  background: hsl(174, 86%, 45%);
-}
 .attribution { 
     font-size: 11px;
     text-align: center; 
